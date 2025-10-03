@@ -9,3 +9,5 @@ services:
 
 networks:
   application_network:
+    driver: bridge
+    internal: true
