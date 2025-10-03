@@ -63,8 +63,16 @@ When adding new services, simply attach them to `application_network` for privat
 When you create a new service (e.g., a web app, API, or database), attach it to the same Docker network:
 
 ```yaml
+services:
+   your-service:
+   image: your-image
+   ...
+   networks:
+      - application_network
+
 networks:
-  - application_network
+  application_network:
+    external: true
 ```
 
 This ensures it can communicate securely with other services without opening ports.  
