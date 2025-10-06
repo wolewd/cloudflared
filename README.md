@@ -52,7 +52,12 @@ When adding new services, simply attach them to `application_network` for privat
    ```
    Refer to the provided [.env.example](https://github.com/wolewd/cloudflared/blob/main/.env.example).
 
-4. Start the container:
+4. Create docker network:
+   ```bash
+   docker network create application_network
+   ```
+   
+6. Start the container:
    ```bash
    docker compose up -d
    ```
